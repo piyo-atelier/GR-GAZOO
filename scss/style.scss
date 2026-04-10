@@ -1,0 +1,11 @@
+//commons
+@use'common/mixin' as m;
+@use'common/common';
+
+// layout
+@use'layout/header';
+@use'layout/footer';
+
+//pages
+@use'pages/event_contents';
+@use'pages/information';
