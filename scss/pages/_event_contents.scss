@@ -20,21 +20,13 @@
     }
 }
 
-.inner{
-    margin-top: 100px;
-
-    @include m.sp{
-        margin-top: 50px;
-    }
-}
-
 .area_title{
     text-align: center;
-    margin-bottom: 60px;
-    margin-inline: auto;
+    margin: 50px auto 60px auto;
+    // margin-inline: auto;
     width: 60%;
 
-    @include m.sp{
+    @include m.tb{
         width: 100%;
     }
     
@@ -79,7 +71,7 @@
         p{
             font:var(--ff-jp_normal);
 
-            @include m.sp{
+            @include m.tb{
                 font:var(--ff-jp_sp_normal);
             }
         }
@@ -92,7 +84,7 @@
     position: relative;
     padding-left: 15px;
 
-    @include m.sp{
+    @include m.tb{
         font:var(--ff-jp_sp_title);
         margin-bottom: 30px;
     }
@@ -125,16 +117,16 @@
             animation: scroll-left 80s infinite 0.5s linear;
             display: flex;
 
-            &:hover{
-                animation-play-state: paused
-            }
-            
             li{
                 width: calc(110vw / 3);
                 padding-right: 20px;
                 flex-shrink: 0;
                 overflow: hidden;
                 position: relative;
+
+                @include m.tb{
+                    width: calc(100vw / 1.5);
+                }
 
                 p{
                     width: 100%;
@@ -152,10 +144,6 @@
                     p{
                         transform:scale(1);
                     }
-                }
-
-                @include m.sp{
-                    width: calc(280vw / 3);
                 }
             }
         }
@@ -285,13 +273,17 @@
 .family_kids_area{
     .area_title_h{
         font-size: 36px;
+
+        @include m.tb{
+            font-size: 32px;
+        }
     }
 }
 
 .family_area_content_text{
     font: var(--ff-jp_normal);
 
-    @include m.sp{
+    @include m.tb{
         font: var(--ff-jp_sp_normal);
     }
 
@@ -301,7 +293,7 @@
         position: relative;
         padding-left: 15px;
 
-        @include m.sp{
+        @include m.tb{
             font: var(--ff-jp_sp_title);
             margin-bottom: 15px;
             width: 100%;
@@ -538,11 +530,11 @@
 
     color: var(--white-color);
     padding: 50px 3% 80px 3%;
-    margin-top: 80px;
+    margin-block: 80px;
     background-color:rgba(0, 0, 0, 0.45) ;
 
     @include m.tb{
-        background-image: url("/img/event_content/bg_sp_AfterParty.png");
+        // background-image: url("/img/event_content/bg_sp_AfterParty.png");
         padding-inline: 3.4%;
     }
 
@@ -562,7 +554,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 90px;
-        column-gap: 2%; 
+        column-gap: 4%; 
         padding: 20px 20px;
         
         @include m.tb{
@@ -572,8 +564,6 @@
         }
 
         .after_party_list{
-            max-width: 500px;
-
             .after_party_list_title{
                 font: var(--ff-jp_subtitle);
                 margin-bottom: 20px;
@@ -606,179 +596,4 @@
 
 }
 
-.btn-faq{
-    width: 200px;
-    height: 100px;
-    background-color: red;
-}
 
-.faq-modal{
-    display: none;
-}
-
-.open{
-    .faq-modal{
-        z-index: 1000;
-        display: block;
-        position: fixed;
-        top:0;
-        left: 0;
-
-        width: 100%;
-        height: 100%;
-        border: solid 2px var(--black-color);
-        background-color: var(--white-color);
-        overflow-y: scroll;
-        
-        .faq-container{
-            padding: 50px 6%;
-        }
-
-        .faq-lists{
-            .faq{
-                margin-bottom: 50px;
-
-                .question{
-                    position: relative;
-                    border-radius: 50px;
-                    min-height: 60px;
-                    font: var(--ff-jp_subtitle);
-                    background-color: var(--grey-color);
-                    
-                    @include m.sp{
-                        border-radius: 9px;
-                        font: var(--ff-jp_sp_title);
-                    }
-                    
-                    .question-text{
-                        display: inline-block;
-                        padding-inline: 65px 60px;
-                        line-height:60px;
-                    }
-
-                    .question-icon{
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        text-align: center;
-                        border-radius: 9px;
-                        aspect-ratio: 1 / 1;
-                        height: 60px;
-                        width: 60px;
-                        color: var(--white-color);
-                        z-index: 50;
-                        background-color: var(--black-color);
-                        font-size: var(--ff-jp_subtitle);
-                        line-height: 60px;
-
-                        @include m.sp{
-                            height: 100%;
-                            font: var(--ff-jp_sp_title);
-                            line-height: 100%;
-                            display: flex;         /* 自身もFlexboxになる */
-                            align-items: center;   /* 中の「Q」を垂直中央にする */
-                            justify-content: center; /* 中の「Q」を水平中央にする */
-                            flex-shrink: 0;
-                        }
-                    }
-
-                    .arrow-btn{
-                        position: absolute;
-                        right: 1px;
-                        color: var(--white-color);
-                        background-color: var(--black-color);
-                        border-radius: 50%;
-                        top: 5px;
-                        right: 5px;
-                        height: 50px;
-                        width: 50px;
-                        text-align: center;
-                        line-height: 50px;
-                    }
-
-                }
-                .answer{
-                    display: none;
-                    position: relative;
-                    border-radius: 15px;
-                    font: var(--ff-jp_normal);
-                    border: solid 1px var(--red-color);
-                    margin-top: 15px;
-                    min-height: 60px;
-
-                    @include m.sp{
-                        font: var(--ff-jp_sp_normal);
-                    }
-                    
-                    .answer-text{
-                        padding:10px 20px 10px 65px;
-                        display: inline-block;
-                    }
-                    
-                    .answer-icon{
-                        display: inline-block;
-                        position: absolute;
-                        left: 0;
-                        top: 0;
-                        text-align: center;
-                        border-radius: 9px;
-                        aspect-ratio: 1 / 1;
-                        height: 60px;
-                        width: 60px;
-                        color: var(--white-color);
-                        z-index: 50;
-                        background-color: var(--red-color);
-                        font: var(--ff-jp_subtitle);
-                        line-height: 60px;
-                    }
-                }
-                
-                .show-up{
-                    .arrow-btn{
-                        transform: rotate(180deg);
-                        background-color: var(--red-color);
-                    }
-                }
-            }
-        }
-
-        .closer{
-            display: flex;
-            gap:45px;
-            font:var(--ff-jp_subtitle);
-            align-items: center;
-            justify-content: center;
-            
-            .btn-close{
-                display: inline-block;
-                width: 50px;
-                height: 50px;
-                position: relative; 
-            
-                span{
-                    display: block;
-                    width: 100%;
-                    height: 2px;
-                    background-color:var(--black-color);
-                    position: absolute; /*対象*/
-
-                    &:nth-child(1) {
-                        top: 50%;
-                        transform: rotate(-45deg);
-                    }
-
-                    &:nth-child(2) {
-                        top: 50%;
-                        transform: rotate(45deg);
-                    }
-                }
-            }
-
-            p{
-                text-align: center;
-                line-height: 58px;
-            }
-        }
-    }
-    
-}

@@ -1,1 +1,57 @@
 @use'../common/mixin' as m;
+.advertisements{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    column-gap: 0px;
+    background-color: var(--black-color);
+    padding: 80px 100px;
+    /* 各カラムが中身の最大幅になり、余ったスペースは右側に寄せられる */
+    grid-template-columns: max-content max-content;
+    /* 左寄せにする（これがないと隙間ができる場合があります） */
+    justify-content: start;
+
+    .advertise{
+        max-width: 500px;
+        border: 1px solid var(--white-color);
+
+        a{
+            img{
+                max-height: 150px;
+            }
+        }
+    }
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    justify-items: center;
+    padding-inline: 80px;
+    padding-block: 80px 40px;
+    background-size: cover;
+    background-position: center;
+    background-image: 
+        linear-gradient(
+            to top left,
+                rgba(255, 0, 0, 0.7) 0%,
+                rgba(0, 0, 0, 1)100%),
+
+        /* ベースとなる黒色 */
+        linear-gradient( var(--black-color) , var(--black-color));
+    
+    li{
+        border-right:1px solid var(--white-color) ;
+        padding-inline: 70px;
+        height: 20px;
+        line-height: 20px;
+        
+        a{
+            font: var(--ff-jp_sp_normal);
+            color: var(--white-color);
+        }
+
+        &:last-child {
+            border-right: none; /* 最後の要素だけ線を消す */
+        }
+    }
+}

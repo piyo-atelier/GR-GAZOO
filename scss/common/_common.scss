@@ -53,6 +53,11 @@ body{
 section{
     /* ヘッダーの高さ分 */
     scroll-margin-top: 80px;
+    margin-top: 80px;
+
+    @include m.tb{
+        margin-top: 40px;
+    }
 }
 
 img {
@@ -75,14 +80,10 @@ a {
     max-width: 1280px;
     margin-inline: auto;
     width: 100%;
-
-    @include m.tb{
-        padding: 0 16px;
-    }
 }
 
 .inner{
-    padding-inline: 6%;
+    padding-inline: 3%;
 }
 
 
