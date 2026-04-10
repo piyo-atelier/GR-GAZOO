@@ -8,13 +8,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-html{
-    font-size: 18px;
-
-    @include m.tb{
-        font-size:16px;
-    }
-}
 
 :root {
     --ff-en: "Avenir", sans-serif; /* 英字基本 */
@@ -38,17 +31,29 @@ html{
     --grey-color:#EEEEEE;
 }
 
+html{
+    font-size: 18px;
+    scroll-behavior: smooth;
+    
+    @include m.tb{
+        font-size:16px;
+    }
+}
 
 body{
     color: var(--black-color);
     font:var(--ff-jp_normal);
+    background-color: var(--white-color);
 
     @include m.tb{
         font: var(--ff-jp_sp_normal);
     }
 }
 
-
+section{
+    /* ヘッダーの高さ分 */
+    scroll-margin-top: 80px;
+}
 
 img {
     width: 100%;
@@ -63,6 +68,7 @@ li {
 a {
     display: inline-block;
     text-decoration: none;
+    color: #3D3B3B;
 }
 
 .wrapper{

@@ -1,1 +1,289 @@
 @use'../common/mixin' as m;
+
+// FV
+.hero {
+    position: relative;
+    height: calc(100vh - 80px);
+    overflow: hidden;
+}
+
+// 背景
+.hero-bg {
+    display: flex;
+    height: 100%;
+}
+
+/* 赤（斜め＋グラデーション） */
+.bg-red {
+    width: 55%;
+    background: linear-gradient(to bottom,
+    #ff0000 0%,
+    #CC0000 70%,
+    #990000 100%);
+    clip-path: polygon(0 0, 85% 0, 70% 100%, 0% 100%);
+    animation: slideInLeft 0.9s ease-out forwards;
+    z-index: 2;
+}
+
+/* 画像 */
+.bg-image {
+    width: 65%;
+    /* height: 100%; */
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    animation: slideInRight 1s ease-out forwards;
+
+    img{
+        height: 100vh;
+        object-position: center 30%;
+    }
+}
+
+.polygon img {
+    margin-left: 90px;
+    width: 50px;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* 文字 */
+.hero-text {
+    position: absolute;
+    top: 53%;
+    left: 5%;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 10;
+    max-width: 1000px;
+}
+
+.hero-text h1 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 48px;
+    line-height: 1.3;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.hero-text h1 span {
+    font-size: 18px;
+}
+
+.place {
+    align-items: center;
+    gap: 15px;
+    font-size: 16px;
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.venue {
+    border: 1px solid #fff;
+    padding: 10px 5px;
+    font-size: 24px;
+    writing-mode: vertical-rl;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.park-name {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.venue2 {
+    display: inline-block;
+    line-height: 1.5;
+}
+
+
+.date {
+    font-family: "Hiragino Kaku Gothic ProN";
+    font-weight: bold;
+    margin-bottom: 30px;
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.day {
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.ten {
+    display: inline-block;
+    vertical-align: 0.1em;
+}
+
+.hy {
+    margin-left: 5px;
+}
+
+.free {
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* アニメーション */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    
+    80% {
+        transform: translateX(5%);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%);
+    }
+    
+    80% {
+        transform: translateX(-5%);
+    }
+    
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/*2ページ目*/
+
+.intro {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    color: white;
+}
+
+/* 背景画像 */
+.intro-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -2;
+}
+
+/* 中の画像 */
+.intro-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+    /* ★フェードインのアニメーション */
+    opacity: 0;
+    filter: blur(10px);
+    animation: bgFadeIn 2.5s ease-out forwards;
+}
+
+/* 黒のぼかし（重ねるレイヤー） */
+.intro-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* background: rgba(0, 0, 0, 0.2);  */
+    z-index: -1;
+    /* 画像より手前、文字より後ろ */
+    
+    /* オーバーレイも一緒にフェードさせるとより滑らか */
+    opacity: 0;
+    animation: overlayFade 2s ease-out 0.5s forwards;
+}
+
+/* --- アニメーションの定義 --- */
+@keyframes bgFadeIn {
+    0% {
+        opacity: 0;
+        filter: blur(10px);
+        transform: scale(1.1);
+        /* 少し大きくして寄る演出 */
+    }
+    
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+    }
+}
+
+@keyframes overlayFade {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+/* テキスト */
+.intro-text {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 20px;
+    color: #000;
+    
+    .one {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow:
+        0 0 1px white,
+        0 0 3px white,
+        0 0 5px white;
+    }
+    .two {
+        font-size: 48px;
+        font-weight: bold;
+        margin-bottom: 80px;
+        text-shadow:
+        0 0 1px white,
+        0 0 3px white,
+        0 0 5px white;
+
+        span{
+            position: relative;
+            background: linear-gradient(to bottom,
+            var(--white-color) 0%,
+            #ff4d4d 40%,
+            #ff0000 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: inline-block;
+            -webkit-text-stroke: 1px white;
+            filter: drop-shadow(0 0 2px white) drop-shadow(0 0 1px white);
+            text-shadow: none;
+
+            &::before{
+                content: "「";
+                color: var(--black-color);
+            }
+
+            &::after{
+                content: "」";
+                color: var(--black-color);
+            }
+        }
+    }
+}
+
+
+
