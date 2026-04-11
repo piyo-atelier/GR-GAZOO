@@ -46,7 +46,7 @@ header {
   width: 100%;
   z-index: 1000;
   background-color: rgba(255, 255, 255, 0.9);
-  }
+}
 
 .header {
   display: flex;
@@ -55,7 +55,7 @@ header {
   padding: 20px 20px;
   background: #fff;
   height: 80px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .header ul {
@@ -243,6 +243,7 @@ nav ul li {
   font-size: 36px;
   margin-bottom: 30px;
 }
+
 
 /* アニメーション */
 @keyframes slideInLeft {
@@ -753,8 +754,8 @@ nav ul li {
 }
 
 /*------------------SP------------------*/
-  
-@media (max-width: 1040px){
+
+@media (max-width: 1040px) {
   body {
     font-size: 16px;
   }
@@ -979,6 +980,7 @@ nav ul li {
     background-color: rgba(0, 0, 0, 0.4);
     padding-left: 10px;
     font-family: "Hiragino Kaku Gothic ProN";
+
   }
 
   .park-name {
@@ -1116,5 +1118,16 @@ nav ul li {
   .line-btn {
     font-size: 16px;
     padding: 10px 20px 10px 20px;
+  }
+  @media (orientation: landscape) and (max-width: 900px) {
+    .hero {
+      height: auto;
+      overflow: visible;
+    }
+  
+    .hero-text {
+      top: 45%;
+    }
+
   }
 }
