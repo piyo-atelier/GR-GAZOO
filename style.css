@@ -620,7 +620,7 @@ nav ul li {
   width: 50%;
   text-align: center;
   position: relative;
-  background-image: url("/img/section_title_背景.png");
+  background-image: url("img/title.png");
   background-size: cover;
   background-position: center;
 }
