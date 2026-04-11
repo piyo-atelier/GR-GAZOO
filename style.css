@@ -441,6 +441,7 @@ nav ul li {
   background-image: url("/img/info.png");
   background-size: cover;
   background-position: center;
+  z-index: 1000;
 }
 
 /* 共通タイトル */
