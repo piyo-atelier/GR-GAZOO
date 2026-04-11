@@ -756,7 +756,7 @@ nav ul li {
 
 
 /*------------------タブレット-------------*/
-@media (max-width: 104px) {
+@media (max-width: 1040px) {
   
   .logo img {
     width: 150px;
@@ -767,7 +767,7 @@ nav ul li {
 /*------------------SP------------------*/
 
 /* スマホを横向きにしたときだけの特別な設定 */
-@media screen and (max-width: 1040px) and (orientation: landscape) {
+@media screen and (max-width: 1040px) {
   .fv-text-container { 
     padding-top: 20px; 
     padding-bottom: 20px;
@@ -934,11 +934,7 @@ nav ul li {
     position: relative;
     width: 100%;
     height: auto;
-    min-height: 100vh;
-    padding: 2000px 0;
   }
-
-
 
 
   .bg-image {
