@@ -1412,7 +1412,7 @@ nav ul li {
 /* LINEボタンの微調整 */
 .line-btn {
   display: inline-block;
-  margin: 20px auto;
+  margin: 40px 0 100px 0;
   padding: 16px 48px;
   font-size: 19px;
   font-weight: bold;
