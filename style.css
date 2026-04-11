@@ -628,14 +628,15 @@ nav ul li {
 }
 
 @media (max-width: 1040px) {
-  .section_title {
+  .main_title {
     font: var(--ff-en_sp_title);
   }
 }
 
 @media (max-width: 545px) {
-  .section_title {
+  .main_title {
     width: 80%;
+    font-size: 30px;
   }
 }
 
@@ -2043,16 +2044,6 @@ nav ul li {
 
   /*information*/
 
-  .main_title {
-    font: var(--ff-en_title);
-    color: var(--white-color);
-    width: 80%;
-    text-align: center;
-    position: relative;
-    background-image: url("img/title.png");
-    background-size: cover;
-    background-position: center;
-  }
 
   .section-title {
     text-align: center;
