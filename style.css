@@ -1978,9 +1978,8 @@ nav ul li {
       height: auto;
       overflow: visible;
     }
-  
     .hero-text {
-      top: 43%;
+      top: 100%;
     }
   }
 }
