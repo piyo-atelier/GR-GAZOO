@@ -725,6 +725,23 @@ nav ul li {
   letter-spacing: 0.05em;
 }
 
+#page_top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 100;
+}
+
+#page_top a img {
+  width: 60px; /* サイズは好きに調整してね */
+  height: auto;
+  transition: opacity 0.3s;
+}
+
+#page_top a:hover img {
+  opacity: 0.7; /* マウスを乗せた時に少し透明にする */
+}
+
 
 
 /*------------------SP------------------*/
