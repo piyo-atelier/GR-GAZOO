@@ -1098,7 +1098,6 @@ nav ul li {
   .notes-sub-heading {
     margin-top: 10px;
     line-height: 1.5;
-    /* letter-spacing:  */
   }
 
   .info-text {
@@ -1127,7 +1126,7 @@ nav ul li {
   #top { 
     height: auto !important;
     min-height: 100vh; 
-    padding-top: 80px; 
+    /* padding-top: 80px; */
     padding-bottom: 40px;
   }
 }
