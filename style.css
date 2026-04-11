@@ -104,7 +104,10 @@ nav ul li {
 
 .logo img {
   display: block;
+  width: 100%;
 }
+
+
 
 .toggle_btn {
   display: none;
@@ -733,15 +736,33 @@ nav ul li {
 }
 
 #page_top a img {
-  width: 60px; /* サイズは好きに調整してね */
+  width: 60px;
   height: auto;
   transition: opacity 0.3s;
 }
 
 #page_top a:hover img {
-  opacity: 0.7; /* マウスを乗せた時に少し透明にする */
+  opacity: 0.8; 
 }
 
+/* GO UPボタンのリンク（aタグ）の設定 */
+.btn-up a, 
+.btn-up a:visited {
+  opacity: 1; 
+  text-decoration: none; 
+}
+.btn-up a:hover {
+  opacity: 0.8; 
+}
+
+/*------------------タブレット------------------*/
+@media (max-width: 104px) {
+  
+  .logo img {
+    width: 150px;
+    height: auto;
+  }
+}
 
 
 /*------------------SP------------------*/
@@ -922,7 +943,7 @@ nav ul li {
 
   .hero-text h1 {
     font-size: 28px;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
     display: block;
   }
 
@@ -996,7 +1017,6 @@ nav ul li {
 
   .intro-text .one {
     font-size: 21px;
-    /* margin-top: 10px; */
     margin-bottom: 28px;
   }
 
