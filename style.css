@@ -923,7 +923,7 @@ nav ul li {
   .hero-bg {
     position: relative;
     width: 100%;
-    height: auto;
+    height: 100vh;
   }
 
   .bg-image {
@@ -1143,6 +1143,15 @@ nav ul li {
     padding: 10px 20px 10px 20px;
   }
 
-
+/* スマホ横向き（画面の高さが短い場合）の調整 */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  /* FVの高さ固定を解除して、中身の高さに合わせる */
+  #top { 
+    height: auto !important;
+    min-height: 100vh; 
+    padding-top: 80px; 
+    padding-bottom: 40px;
+  }
+}
 
 }
