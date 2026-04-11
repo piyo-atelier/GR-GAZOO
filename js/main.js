@@ -60,12 +60,12 @@ $(function () {
     if ($(this).hasClass('show-up')){
       $(this).removeClass('show-up');
     }else{
-      $(this).addClass('show-up').add;
+      $(this).addClass('show-up');
     }
   });
   
   // メニューのリンクをクリックした時
-  $(window).om('load',function(){
+  $(window).on('load',function(){
     $('.faq-lists li:first-of-type question').addClass(".show-up");
       $(".show-up").each(function(index,element){
         var Title=$(element).children('.question');
@@ -74,6 +74,4 @@ $(function () {
         $(Box).slideDown(500);
       });
   });
-
 });
-
