@@ -728,6 +728,7 @@ nav ul li {
   letter-spacing: 0.05em;
 }
 
+/* --- GO UPボタンの基本設定 --- */
 #page_top {
   position: fixed;
   right: 20px;
@@ -735,22 +736,46 @@ nav ul li {
   z-index: 100;
 }
 
+#page_top a {
+  text-decoration: none;
+  display: block;
+}
+
 #page_top a img {
   width: 60px;
   height: auto;
   transition: opacity 0.3s;
+  opacity: 1;
 }
 
-#page_top a:hover img {
-  opacity: 0.7; 
+/* PC（マウス操作）の時だけhoverを有効にする魔法 */
+@media (hover: hover) {
+  #page_top a:hover img {
+    opacity: 0.8; 
+  }
 }
 
-/* GO UPボタンのリンク（aタグ）の設定 */
-.btn-up a, 
+/* クリックした後やスマホでタップした後に色が残るのを防ぐ */
+#page_top a:visited img,
+#page_top a:active img {
+  opacity: 1 !important;
+}
+
+
+/* PC（マウス操作）の時だけhoverを有効にする設定 */
+@media (hover: hover) {
+  .btn-up a:hover {
+    opacity: 0.8;
+  }
+}
+
+/* スマホやタブレット（タップ操作）で色が残るのを防ぐ設定 */
+.btn-up a:active,
 .btn-up a:visited {
-  opacity: 1; 
-  text-decoration: none; 
+  opacity: 1 !important; 
 }
+
+
 
 /*------------------タブレット-------------*/
 @media (max-width: 104px) {
