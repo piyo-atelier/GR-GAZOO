@@ -789,6 +789,7 @@ nav ul li {
     width: 100%;
     position: relative;
     padding-bottom: 60px;
+    overflow: hidden;
   }
   .carousel-contents .ex_content {
     width: 100%;
@@ -945,6 +946,7 @@ nav ul li {
   .carousel-kids_activities {
     display: block;
     padding-bottom: 95px;
+    overflow: hidden;
   }
 }
 .carousel-kids_activities .kids_activity {
