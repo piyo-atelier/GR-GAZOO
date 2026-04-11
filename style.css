@@ -960,6 +960,7 @@ nav ul li {
   .hero-text {
     text-align: left;
     width: 100%;
+    font-size: 1.2rem; /*スマホ横向きにした時の文字サイズ*/
   }
 
   .hero-text h1 {
@@ -1152,15 +1153,4 @@ nav ul li {
     padding: 10px 20px 10px 20px;
   }
 
-}
-
-@media screen and (orientation: landscape) and (max-width: 950px) {
-  .fv-text {
-    font-size: 1.2rem; /* 文字を小さくする */
-    top: 50%; /* 位置を微調整 */
-  }
-  .fv-container {
-    height: auto;
-    padding: 40px 0;
-  }
 }
