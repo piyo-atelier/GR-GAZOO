@@ -1959,14 +1959,35 @@ nav ul li {
     font-size: 16px;
     padding: 10px 20px 10px 20px;
   }
-
-  @media (orientation: landscape) and (max-width: 900px) {
-    .hero {
-      height: auto;
-      overflow: visible;
-    }
-    .hero-text {
-      top: 100%;
-    }
+@media (orientation: landscape) and (max-width: 900px) {
+  .hero {
+    height: auto;
+    min-height: unset;
+    overflow: visible;
   }
+
+  .hero-text {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+    margin-bottom: 15px;
+  }
+
+  .date {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 10px;
+  }
+
+  .place {
+    margin-bottom: 10px;
+  }
+
+  .free {
+    font-size: 20px;
+  }
+}
 }
