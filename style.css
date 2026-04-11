@@ -313,11 +313,7 @@ nav ul li {
   left: 0;
   width: 100%;
   height: 100vh;
-  /* background: rgba(0, 0, 0, 0.2);  */
   z-index: -1;
-  /* 画像より手前、文字より後ろ */
-
-  /* オーバーレイも一緒にフェードさせるとより滑らか */
   opacity: 0;
   animation: overlayFade 2s ease-out 0.5s forwards;
 }
@@ -442,7 +438,7 @@ nav ul li {
   width: 50%;
   text-align: center;
   position: relative;
-  background-image: url("/img/タイトル.png");
+  background-image: url("/img/info.png");
   background-size: cover;
   background-position: center;
 }
