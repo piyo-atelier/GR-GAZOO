@@ -741,40 +741,31 @@ nav ul li {
   display: block;
 }
 
-#page_top a img {
-  width: 60px;
-  height: auto;
-  transition: opacity 0.3s;
-  opacity: 1;
-}
 
-/* PC（マウス操作）の時だけhoverを有効にする魔法 */
-@media (hover: hover) {
-  #page_top a:hover img {
-    opacity: 0.8; 
-  }
-}
-
-/* クリックした後やスマホでタップした後に色が残るのを防ぐ */
 #page_top a:visited img,
 #page_top a:active img {
   opacity: 1 !important;
 }
 
+#page_top a img {
+  width: 60px;
+  height: auto;
+  transition: opacity 0.3s;
+  opacity: 1 !important;
+}
 
-/* PC（マウス操作）の時だけhoverを有効にする設定 */
 @media (hover: hover) {
-  .btn-up a:hover {
-    opacity: 0.8;
+  #page_top a:hover img {
+    opacity: 0.7 !important;
   }
 }
 
-/* スマホやタブレット（タップ操作）で色が残るのを防ぐ設定 */
-.btn-up a:active,
-.btn-up a:visited {
-  opacity: 1 !important; 
+#page_top a:active img,
+#page_top a:visited img,
+#page_top a:focus img {
+  opacity: 1 !important;
+  outline: none;
 }
-
 
 
 /*------------------タブレット-------------*/
@@ -787,6 +778,28 @@ nav ul li {
 }
 
 /*------------------SP------------------*/
+
+/* スマホを横向きにしたときだけの特別な設定 */
+@media screen and (max-width: 1040px) and (orientation: landscape) {
+  .fv-text-container { 
+    padding-top: 20px; 
+    padding-bottom: 20px;
+  }
+
+  .fv-title { 
+    font-size: 24px;
+  }
+
+  .fv-sub-text {
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .fv-section {
+    height: auto;
+    min-height: 100vh; 
+  }
+}
 
 @media (max-width: 1040px) {
   body {
