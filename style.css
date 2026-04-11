@@ -29,40 +29,52 @@
 
 
 body {
-  font-family:
-    "Hiragino Kaku Gothic StdN",
-    "Hiragino Kaku Gothic ProN",
-    "Avenir",
-    "Hiragino Sans",
-    "Yu Gothic",
-    "Meiryo",
-    sans-serif;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #000;
-  background: #fff;
-  line-height: 1.8;
-  padding-top: 80px;
+  color: var(--black-color);
+  font: var(--ff-jp_normal);
+  background-color: var(--white-color);
+}
+@media (max-width: 1040px) {
+  body {
+    font: var(--ff-jp_sp_normal);
+  }
 }
 
 img {
   width: 100%;
   vertical-align: bottom;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+li {
+  list-style: none;
 }
 
 a {
-  color: #3D3B3B;
   text-decoration: none;
+  color: #3D3B3B;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
 section {
-  scroll-margin-top: 80px;
   /* ヘッダーの高さ分 */
+  scroll-margin-top: 80px;
+  margin-top: 80px;
+}
+@media (max-width: 1040px) {
+  section {
+    margin-top: 40px;
+  }
+}
+
+.wrapper {
+  max-width: 1280px;
+  margin-inline: auto;
+  width: 100%;
+}
+
+.inner {
+  padding-inline: 3%;
 }
 
 /*header*/
@@ -575,6 +587,8 @@ nav ul li {
   font-weight: bold;
 }
 
+
+
 /* 中央揃えの見出し*/
 .section-title {
   text-align: center;
@@ -599,6 +613,28 @@ nav ul li {
   /* 上下中央揃え */
   margin-bottom: 10px;
 }
+
+.main_title {
+  font: var(--ff-en_title);
+  color: var(--white-color);
+  width: 50%;
+  text-align: center;
+  position: relative;
+  background-image: url("/img/section_title_背景.png");
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 1040px) {
+  .section_title {
+    font: var(--ff-en_sp_title);
+  }
+}
+@media (max-width: 545px) {
+  .section_title {
+    width: 80%;
+  }
+}
+
 
 /* ★ここに正方形を作る疑似要素を追加 */
 .location-name::before {
@@ -780,6 +816,116 @@ nav ul li {
   opacity: 1 !important;
   outline: none;
 }
+
+/* footer類 */
+.advertisements {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 0px;
+       column-gap: 0px;
+  background-color: var(--black-color);
+  padding: 80px 100px;
+  justify-content: center;
+}
+@media (max-width: 1040px) {
+  .advertisements {
+    padding: 40px 6%;
+    flex-direction: column;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+}
+.advertisements .right {
+  justify-content: end;
+}
+@media (max-width: 1040px) {
+  .advertisements .right {
+    justify-content: center;
+  }
+}
+.advertisements .advertise {
+  border: 1px solid var(--white-color);
+}
+.advertisements .advertise a img {
+  max-height: 150px;
+}
+
+.footer-nav {
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  padding-inline: 40px;
+  padding-block: 80px 40px;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to top left, rgba(255, 0, 0, 0.7) 0%, rgb(0, 0, 0) 100%), linear-gradient(var(--black-color), var(--black-color));
+}
+@media (max-width: 1040px) {
+  .footer-nav {
+    flex-direction: column;
+    padding-block: 50px;
+  }
+}
+.footer-nav li {
+  position: relative;
+  width: 12.8571428571vw;
+  padding-inline: 10px;
+  line-height: 20px;
+  text-align: center;
+}
+@media (max-width: 1040px) {
+  .footer-nav li {
+    text-align: left;
+    padding-inline: 0;
+    width: 100%;
+    margin-block: 10px;
+  }
+}
+.footer-nav li::before {
+  position: absolute;
+  content: "";
+  display: block;
+  height: 10px;
+  width: 0;
+  border-right: 1px solid var(--white-color);
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin-inline: auto;
+}
+@media (max-width: 1040px) {
+  .footer-nav li::before {
+    content: none;
+  }
+}
+.footer-nav li::after {
+  content: none;
+  position: absolute;
+  display: block;
+  height: 0px;
+  width: 20px;
+  border-bottom: 1px solid var(--white-color);
+  margin-block: 10px;
+}
+@media (max-width: 1040px) {
+  .footer-nav li::after {
+    content: "";
+  }
+}
+.footer-nav li::after:last-child::after {
+  content: none;
+}
+.footer-nav li a {
+  font: var(--ff-jp_sp_normal);
+  color: var(--white-color);
+}
+.footer-nav li:first-child::before {
+  content: none;
+}
+.footer-nav .right {
+  justify-content: end;
+}
+
 
 /*------------------SP------------------*/
 
