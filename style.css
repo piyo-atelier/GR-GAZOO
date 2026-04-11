@@ -837,7 +837,6 @@ nav ul li {
     width: 100%;
     position: relative;
     padding-bottom: 60px;
-    overflow: hidden;
   }
 
   .carousel-contents .ex_content {
@@ -1011,6 +1010,7 @@ nav ul li {
 }
 
 .carousel-kids_activities {
+  position: relative;
   display: none;
   width: 100%;
 }
@@ -1371,7 +1371,9 @@ nav ul li {
 .open .faq-modal .faq-lists .faq .answer .answer-text {
   padding: 10px 20px 10px 65px;
   display: inline-block;
+  text-align: left;
 }
+
 
 .open .faq-modal .faq-lists .faq .answer .answer-icon {
   display: inline-block;
