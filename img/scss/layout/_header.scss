@@ -1,0 +1,58 @@
+@use'../common/mixin' as m;
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 900;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 20px;
+    background-color: var(--white-color);
+    height: 80px;
+
+    nav{
+        display: block;
+        position: static;
+        height: auto;
+        background: transparent;
+        
+        ul{
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            font-family: "Hiragino Kaku Gothic ProN";
+            font-weight: 600;
+            padding: 0;
+            
+            li {
+                margin-left: 20px;
+                a{
+                    color: #000;
+                    font-family: "Hiragino Kaku Gothic ProN", sans-serif;
+                    font-weight: 600;
+                    font-size: 16px;
+                    text-decoration: none;
+                    transition: opacity 0.3s;
+                    
+                    &:hover{
+                        opacity: 0.7;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.logo img {
+    display: block;
+}
+
+.toggle_btn {
+    display: none;
+}
