@@ -1154,4 +1154,15 @@ nav ul li {
     padding: 10px 20px 10px 20px;
   }
 
+  @media screen and (max-width: 960px) and (orientation: landscape) {
+    .hero-bg  {
+      height: auto;
+      padding: 40px 0;
+    }
+  
+    .hero-text {
+      font-size: 1.5rem; 
+    }
+  }
+
 }
