@@ -468,19 +468,6 @@ nav ul li {
   letter-spacing: 0.05em;
 }
 
-.info-bar {
-  color: #fff;
-}
-
-
-.info-bar {
-  width: 50%;
-  text-align: center;
-  position: relative;
-  background-image: url("img/title.png");
-  background-size: cover;
-  background-position: center;
-}
 
 /* 共通タイトル */
 .title {
