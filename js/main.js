@@ -75,7 +75,5 @@ $(function () {
       });
   });
 
-   // 再計算
-  $('#element').removeAttr('style').slick('setPosition');
 });
 

@@ -1884,6 +1884,12 @@ nav ul li {
 
   }
 
+  .closer .wrapper {
+    font-size: 18px;
+    margin-bottom: 0;
+
+  }
+
   /*FV*/
 
   .hero-bg {
