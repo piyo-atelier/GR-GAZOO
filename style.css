@@ -438,7 +438,7 @@ nav ul li {
   width: 50%;
   text-align: center;
   position: relative;
-  background-image: url("img/info.png");
+  background-image: url("img/title.png");
   background-size: cover;
   background-position: center;
 }
@@ -512,8 +512,6 @@ nav ul li {
 /* マップ */
 .map-img {
   margin-top: 30px;
-  /* margin-right: 10px; */
-  /* width: 100%; */
 }
 
 .map-img img {
@@ -527,7 +525,6 @@ nav ul li {
 /* アクセス */
 .access-content,
 .notes-content {
-  /* max-width: 900px; */
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -550,8 +547,6 @@ nav ul li {
 .info-text p strong {
   font-weight: bold;
 }
-
-
 
 /* 中央揃えの見出し*/
 .section-title {
@@ -585,9 +580,7 @@ nav ul li {
   left: 0;
   width: 18px;
   height: 18px;
-
   background-color: #ff0000;
-  /* border-radius: 2px; */
 }
 
 .sub-heading {
@@ -595,6 +588,7 @@ nav ul li {
   padding-left: 10px;
   margin-top: 30px;
   margin-bottom: 10px;
+  font-size: 24px;
 }
 
 .map-placeholder {
@@ -611,8 +605,9 @@ nav ul li {
 /* 注意事項のリスト装飾 */
 
 .notes-sub-heading {
-  margin-top: 25px;
-  margin-bottom: 25px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  font-size: 24px;
 }
 
 .yellow-dots {
@@ -655,7 +650,6 @@ nav ul li {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* margin-bottom: 30px; */
 }
 
 .contact p {
@@ -690,8 +684,6 @@ nav ul li {
 /* LINEボタンの微調整 */
 .line-btn {
   display: inline-block;
-  /* justify-content: center; */
-  /* align-items: center; */
   margin: 20px auto;
   padding: 16px 48px;
   font-size: 19px;
